@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-form input {
+  width: 250px;
+  height: 33px;
+  padding-left: 5px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+.search-form input::placeholder {
+  padding-left: 5px;
+  color: #fff;
+}
+
+.search-form button {
+  width: 100px;
+  height: 33px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+
+.load-more {
+  display: block;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 7px 15px;
+  background-color: blueviolet;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.load-more.is-hidden {
+  display: none;
+}
+
+.load-more > .spinner.is-hidden {
+  display: none;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  margin: 0;
+  padding-top: 90px;
+  max-width: calc(100vw - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.gallery > div {
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #2a2a2a;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.info p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
