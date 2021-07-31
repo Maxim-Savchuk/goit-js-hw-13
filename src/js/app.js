@@ -64,7 +64,6 @@ async function onLoadMore() {
     window.scrollBy({
       top: cardHeight * 1.5,
       behavior: 'smooth',
-      block: 'end',
     });
 
     console.log(getCards.hits.length);
