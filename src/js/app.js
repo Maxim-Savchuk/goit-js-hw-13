@@ -64,10 +64,17 @@ async function onLoadMore() {
     window.scrollBy({
       top: cardHeight * 1.5,
       behavior: 'smooth',
+      block: 'end',
     });
+
+    console.log(getCards.hits.length);
+
+    if (getCards.hits.length < 40) {
+      endCollection();
+      return;
+    }
   } catch (error) {
-    loadMoreBtn.hide();
-    showMessage('end');
+    endCollection();
   }
 }
 
@@ -90,4 +97,9 @@ function showMessage(message) {
   } else if (message === Number(message)) {
     Notiflix.Notify.info(`Hooray! We found ${message} images.`);
   }
+}
+
+function endCollection() {
+  loadMoreBtn.hide();
+  showMessage('end');
 }
